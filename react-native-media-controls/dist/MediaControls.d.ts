@@ -18,6 +18,7 @@ export declare type Props = {
     playerState: PLAYER_STATES;
     progress: number;
     showOnStart?: boolean;
+    showSlider?: boolean;
 };
 declare const MediaControls: React.FC<Props> & MediaControlsComposition;
 export default MediaControls;

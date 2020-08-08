@@ -1,9 +1,9 @@
 declare const _default: {
     container: {
         alignItems: "center";
-        backgroundColor: "transparent";
-        bottom: number;
-        flex: number;
+        backgroundColor: "grey";
+        bottom: 0;
+        flex: 0.5;
         flexDirection: "column";
         justifyContent: "space-between";
         left: number;
@@ -11,7 +11,7 @@ declare const _default: {
         paddingVertical: number;
         position: "absolute";
         right: number;
-        top: number;
+        top: 500;
     };
     controlsRow: {
         alignItems: "center";
@@ -77,8 +77,9 @@ declare const _default: {
     };
     toolbar: {
         flexDirection: "row";
-        flex: number;
+        flex: 0.5;
         justifyContent: "flex-end";
+        backgroundColor: 'red'
     };
     toolbarRow: {
         alignItems: "flex-start";

@@ -167,7 +167,8 @@ var Slider = function Slider(props) {
   var progress = props.progress,
       duration = props.duration,
       mainColor = props.mainColor,
-      onFullScreen = props.onFullScreen,
+    onFullScreen = props.onFullScreen,
+      showSlider = props.showSlider,
       onPause = props.onPause;
 
   var dragging = function dragging(value) {
@@ -187,7 +188,7 @@ var Slider = function Slider(props) {
     onPause();
   };
 
-  return React__default.createElement(reactNative.View, {
+  return Boolean(showSlider)? React__default.createElement(reactNative.View, {
     style: [styles.controlsRow, styles.progressContainer]
   }, React__default.createElement(reactNative.View, {
     style: styles.progressColumnContainer
@@ -213,7 +214,7 @@ var Slider = function Slider(props) {
     onPress: onFullScreen
   }, React__default.createElement(reactNative.Image, {
     source: fullScreenImage
-  })));
+  }))): null;
 };
 
 var Toolbar = function Toolbar(_ref) {
@@ -230,7 +231,8 @@ var MediaControls = function MediaControls(props) {
       isLoading = _props$isLoading === void 0 ? false : _props$isLoading,
       _props$mainColor = props.mainColor,
       mainColor = _props$mainColor === void 0 ? "rgba(12, 83, 175, 0.9)" : _props$mainColor,
-      onFullScreen = props.onFullScreen,
+    onFullScreen = props.onFullScreen,
+      showSlider = props.showSlider,
       onReplayCallback = props.onReplay,
       onSeek = props.onSeek,
       onSeeking = props.onSeeking,
@@ -364,6 +366,7 @@ var MediaControls = function MediaControls(props) {
     duration: duration,
     mainColor: mainColor,
     onFullScreen: onFullScreen,
+    showSlider: showSlider,
     playerState: playerState,
     onSeek: onSeek,
     onSeeking: onSeeking,

@@ -73,7 +73,7 @@ const App = () => {
         volume={0.0}
       />
       <MediaControls
-        isFullScreen={isFullScreen}
+        isFullScreen={false}
         duration={duration}
         isLoading={isLoading}
         mainColor="grey"
@@ -81,14 +81,20 @@ const App = () => {
         onPaused={onPaused}
         onReplay={onReplay}
         onSeek={onSeek}
+        showSlider={false}
         onSeeking={onSeeking}
         playerState={playerState}
-        progress={currentTime}>
-        <MediaControls.Toolbar>
-          <View style={styles.toolbar}>
-          </View>
-        </MediaControls.Toolbar>
-      </MediaControls>
+        sliderStyle={{
+          containerStyle: {
+            backgroundColor:"green",
+             alignItems: "center",
+            //  alignSelf: "stretch",
+            //  justifyContent: "center",
+            //  marginBottom:350,
+          }
+        }}
+        toolBarStyle={{backgroundColor:"red"}}
+        progress={currentTime}/>
     </View>
   );
 };
